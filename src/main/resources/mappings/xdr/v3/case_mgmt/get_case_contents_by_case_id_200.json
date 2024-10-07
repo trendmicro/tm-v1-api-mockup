@@ -1,0 +1,43 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)/contents",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "count": 50,
+      "items": [
+        {
+          "attachments": [
+            {
+              "etag": "0x8DBD5381E3838D3",
+              "id": "4fe930e7-e5c9-4c88-a074-1e6415723bf8",
+              "name": "screenshot.jpg",
+              "size": 688,
+              "uploadedDateTime": "2023-10-07T09:49:21Z"
+            }
+          ],
+          "comment": "Please see the attached file.",
+          "createdDateTime": "2023-10-07T06:21:58Z",
+          "creator": {
+            "email": "ted_mosby@example.com",
+            "id": "2679a068-2090-4640-8564-ef22220a56c9",
+            "name": "Ted Mosby"
+          },
+          "id": "7bdc2bcf-97cd-4570-bfb9-a15989399534",
+          "updatedDateTime": "2023-10-07T09:49:21Z"
+        }
+      ],
+      "nextLink": "https://api.xdr.trendmicro.com/v3.0/caseManagement/cases/CL-00005-20231007-00005/contents?skipToken=skipToken",
+      "totalCount": 100
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

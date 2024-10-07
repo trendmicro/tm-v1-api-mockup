@@ -1,0 +1,31 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)/contents/(.*)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "NOT_FOUND"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "NotFound",
+        "innererror": {
+          "code": "ItemNotFound",
+          "message": "The item does not exist."
+        },
+        "message": "Unable to process the request. Verify that the required data exists and try again."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

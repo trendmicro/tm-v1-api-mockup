@@ -1,0 +1,58 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPath": "/v3.0/eiqs/endpoints",
+    "method": "GET",
+    "headers": {
+      "TMV1-Query": {
+        "contains": "missing_prodcode"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "items": [
+        {
+          "agentGuid": "35fa11da-a24e-40cf-8b56-baf8828cc151",
+          "loginAccount": {
+            "value": [
+              "MSEDGEWIN10\\\\IEUser"
+            ],
+            "updatedDateTime": "{{now offset='-1 days'}}"
+          },
+          "endpointName": {
+            "value": "MSEDGEWIN10",
+            "updatedDateTime": "{{now offset='-1 days'}}"
+          },
+          "macAddress": {
+            "value": [
+              "00:1c:42:be:22:5f"
+            ],
+            "updatedDateTime": "{{now offset='-1 days'}}"
+          },
+          "ip": {
+            "value": [
+              "10.211.55.36"
+            ],
+            "updatedDateTime": "{{now offset='-1 days'}}"
+          },
+          "osName": "Linux",
+          "osVersion": "10.0.17763",
+          "osDescription": "Windows 10 Enterprise Evaluation (64 bit) build 17763",
+          "productCode": "",
+          "installedProductCodes": [
+            "xes",
+            "sao"
+          ]
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "BAD_REQUEST"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+  "error": {
+    "code": "BadRequest",
+    "message": "Parameters invalid. Check your request payload and try again.",
+    "target": "riskLevels",
+    "innererror": {
+      "code": "InvalidOptionalParameters"
+    }
+  }
+},
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPath": "/v3.0/caseManagement/cases",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "count": 50,
+      "items": [
+        {
+          "associatedItemIds": [
+            "WB-11542-20230914-00041"
+          ],
+          "caseUrl": "https://portal.xdr.trendmicro.com/#/app/acl/casemgm?caseid=CL-00005-20231007-00005",
+          "closedDateTime": "2023-10-11T07:01:35Z",
+          "createdDateTime": "2023-10-07T06:21:58Z",
+          "creator": {
+            "email": "ted_mosby@example.com",
+            "id": "2679a068-2090-4640-8564-ef22220a56c9",
+            "name": "Ted Mosby"
+          },
+          "description": "This is a description.",
+          "findings": "NoFindings",
+          "id": "CL-00005-20231007-00005",
+          "lastUpdater": {
+            "email": "ted_mosby@example.com",
+            "id": "2679a068-2090-4640-8564-ef22220a56c9",
+            "name": "Ted Mosby"
+          },
+          "name": "Possible Ransomware Attack",
+          "owners": [
+            {
+              "email": "ted_mosby@example.com",
+              "id": "2679a068-2090-4640-8564-ef22220a56c9",
+              "name": "Ted Mosby"
+            }
+          ],
+          "priority": "P0",
+          "relatedCaseIds": [
+            "CL-00005-20230918-00027"
+          ],
+          "status": "Open",
+          "type": "Workbench",
+          "updatedDateTime": "2023-10-07T09:49:21Z",
+          "holder": "Analyst",
+          "externalTicketCreatedDateTime": "2023-10-07T09:49:21Z",
+          "externalTicketUpdatedDateTime": "2023-10-07T09:49:21Z"
+        }
+      ],
+      "nextLink": "https://api.xdr.trendmicro.com/v3.0/caseManagement/cases?skipToken=skipToken",
+      "totalCount": 100
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

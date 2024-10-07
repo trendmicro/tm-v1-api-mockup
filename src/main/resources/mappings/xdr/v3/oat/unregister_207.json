@@ -1,0 +1,21 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPath": "/v3.0/oat/dataPipelines/delete",
+    "method": "POST"
+  },
+  "response": {
+    "status": 207,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": [
+      {
+        "status": 204
+      }
+    ],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

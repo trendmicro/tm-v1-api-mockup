@@ -1,0 +1,37 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPath": "/v3.0/oat/detections",
+    "method": "GET",
+    "queryParameters": {
+      "detectedStartDateTime": {
+        "equalTo": "server_error"
+      },
+      "detectedEndDateTime": {
+        "matches": ".*"
+      },
+      "ingestedStartDateTime": {
+        "matches": ".*"
+      },
+      "ingestedEndDateTime": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "InternalServerError",
+        "message": "Internal server error occurred. Please try again. If the issue persists, contact your support provider. (Error code: 1000999)",
+        "number": 1009999
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

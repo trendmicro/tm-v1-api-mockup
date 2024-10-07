@@ -1,0 +1,38 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "NOT_FOUND"
+      }
+    },
+    "queryParameters": {
+      "startDateTime": {
+        "matches": ".*"
+      },
+      "endDateTime": {
+        "matches": ".*"
+      },
+      "top": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "NotFound",
+        "message": "Verify that the specified data pipeline exists and try again."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

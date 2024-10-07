@@ -1,0 +1,31 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)",
+    "method": "PATCH",
+    "headers": {
+      "Authorization": {
+        "contains": "CONDITION_NOT_MET"
+      }
+    }
+  },
+  "response": {
+    "status": 412,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "ConditionNotMet",
+        "innererror": {
+          "code": "ETag check failed",
+          "message": "ETag in request header not match the latest ETag."
+        },
+        "message": "An precondition check Failed. Please try again later."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

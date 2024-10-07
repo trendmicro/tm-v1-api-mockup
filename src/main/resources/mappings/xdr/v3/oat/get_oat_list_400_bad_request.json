@@ -1,0 +1,41 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPath": "/v3.0/oat/detections",
+    "method": "GET",
+    "queryParameters": {
+      "detectedStartDateTime": {
+        "equalTo": "bad_request"
+      },
+      "detectedEndDateTime": {
+        "matches": ".*"
+      },
+      "ingestedStartDateTime": {
+        "matches": ".*"
+      },
+      "ingestedEndDateTime": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "BadRequest",
+        "message": "Invalid parameter detected. Check that all parameters are valid and try again. (Error code: 1010999)",
+        "number": 1010999,
+        "target": "startTime",
+        "innererror": {
+          "code": "InvalidDateValue"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

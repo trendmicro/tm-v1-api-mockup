@@ -1,0 +1,27 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)",
+    "method": "PATCH",
+    "headers": {
+      "Authorization": {
+        "contains": "SERVER_ERROR"
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "InternalServerError",
+        "message": "An internal error has occurred. Please try again later. If the issue persists, contact your support provider."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

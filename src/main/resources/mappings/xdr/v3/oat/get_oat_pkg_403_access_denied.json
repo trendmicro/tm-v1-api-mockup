@@ -1,0 +1,27 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages/(.*)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "ACCESS_DENIED"
+      }
+    }
+  },
+  "response": {
+    "status": 403,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "Access Denied",
+        "message": "You do not have the permission to access the data of this pipeline."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages",
+    "method": "GET",
+    "queryParameters": {
+      "pageToken": {
+        "equalTo": "c2tpcFRva2Vu"
+      },
+      "startDateTime": {
+        "matches": ".*"
+      },
+      "endDateTime": {
+        "matches": ".*"
+      },
+      "top": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "items": [
+        {
+          "id": "2021103019-7898c20d-fc91-443b-9a4e-f8ec3ab745ab",
+          "createdDateTime": "2021-10-30T19:50:00Z"
+        },
+        {
+          "id": "2021103019-00fad7bf-749b-43e0-b8b6-61dc83dc2ede",
+          "createdDateTime": "2021-10-30T19:55:00Z"
+        }
+      ],
+      "count": 2,
+      "totalCount": 20,
+      "requestedDateTime": "2021-10-30T20:00:00Z",
+      "latestPackageCreatedDateTime": "2021-10-30T19:55:00Z"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

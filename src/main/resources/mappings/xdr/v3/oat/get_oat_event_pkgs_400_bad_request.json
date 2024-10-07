@@ -1,0 +1,42 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "BAD_REQUEST"
+      }
+    },
+    "queryParameters": {
+      "startDateTime": {
+        "matches": ".*"
+      },
+      "endDateTime": {
+        "matches": ".*"
+      },
+      "top": {
+        "matches": ".*"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "BadRequest",
+        "message": "Parameters invalid. Check your request payload and try again.",
+        "target": "startDateTime",
+        "innererror": {
+          "code": "MissingRequiredParameter"
+        }
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPath": "/v3.0/caseManagement/cases",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "BAD_REQUEST"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "BadRequest",
+        "innererror": {
+          "code": "ItemIdMissing",
+          "message": "The item ID is missing."
+        },
+        "message": "Unable to process the request. Verify that the request is properly formatted and try again."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

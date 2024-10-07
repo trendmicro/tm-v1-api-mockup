@@ -1,0 +1,27 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)",
+    "method": "PATCH",
+    "headers": {
+      "If-Match": {
+        "matches": "\"precondition_failed\""
+      }
+    }
+  },
+  "response": {
+    "status": 412,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "ConditionNotMet",
+        "message": "ETag invalid. Check your request payload and try again."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

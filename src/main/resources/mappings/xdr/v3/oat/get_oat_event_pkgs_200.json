@@ -1,0 +1,33 @@
+{
+  "priority": 8,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "items": [
+        {
+          "id": "2021103019-7898c20d-fc91-443b-9a4e-f8ec3ab745ab",
+          "createdDateTime": "2021-10-30T19:50:00Z"
+        },
+        {
+          "id": "2021103019-00fad7bf-749b-43e0-b8b6-61dc83dc2ede",
+          "createdDateTime": "2021-10-30T19:55:00Z"
+        }
+      ],
+      "count": 2,
+      "totalCount": 20,
+      "requestedDateTime": "2021-10-30T20:00:00Z",
+      "latestPackageCreatedDateTime": "2021-10-30T19:55:00Z",
+      "nextLink": "https://api.xdr.trendmicro.com/v3/xdr/oat/dataPipeline/8746fc45-6b9d-4923-b476-931aec6e06eb/packages?startDateTime=2021-10-07T18:00:00Z&endDateTime=2021-10-07T18:15:00Z&pageSize=500&pageToken=1hQ4LIXqZ2ODQPEp67gEl52LQGLtWMUq2pN7kVoInTOZowFKtFZ0+gyPBlfI0fACqJFAupCgTnIU="
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

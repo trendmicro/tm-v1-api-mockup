@@ -1,0 +1,31 @@
+{
+  "priority": 1,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)",
+    "method": "GET",
+    "headers": {
+      "Authorization": {
+        "contains": "ACCESS_DENIED"
+      }
+    }
+  },
+  "response": {
+    "status": 403,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "error": {
+        "code": "AccessDenied",
+        "innererror": {
+          "code": "NoPermissionAccess",
+          "message": "No permission to access the case log"
+        },
+        "message": "Unable to process the request. Verify that you have permission to access the data and try again."
+      }
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

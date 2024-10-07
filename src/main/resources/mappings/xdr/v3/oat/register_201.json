@@ -1,0 +1,20 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPath": "/v3.0/oat/dataPipelines",
+    "method": "POST"
+  },
+  "response": {
+    "status": 201,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "status": 201
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "Location":"https://api.xdr.trendmicro.com/v3.0/xdr/oat/dataPipeline/c80d8eaa-e55f-4c64-991f-9d0bdf59ee5b"
+    }
+  }
+}

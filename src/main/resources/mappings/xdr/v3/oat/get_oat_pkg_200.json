@@ -1,0 +1,19 @@
+{
+  "priority": 7,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)/packages/(.*)",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "status": 200
+    },
+    "headers": {
+      "Content-Type": "text/plain"
+    }
+  }
+}

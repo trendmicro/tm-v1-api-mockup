@@ -1,0 +1,19 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)/contents/(.*)",
+    "method": "DELETE"
+  },
+  "response": {
+    "status": 204,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "status": 204
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

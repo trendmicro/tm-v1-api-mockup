@@ -318,8 +318,7 @@ Below is the full list of the currently available parameters to produce the vari
 | get_endpoint_data                      | 400      | endpoint == 'bad_request'                                             |                                 |
 | get_endpoint_data                      | 500      | endpoint == 'server_error'                                            |                                 | 
 | get_endpoint_data                      | 200      | endpoint == random string                                             |                                 |
-| get_endpoint_data                      | 400      | endpoint == 'bad_request'                                             |                                 |
-| get_endpoint_data                      | 500      | endpoint == 'server_error'                                            |                                 | 
+| get_endpoint_data                      | 200      | endpoint == 'missing_prodcode'                                        |                                 |
 | add_alert_note                         | 201      | content == random string                                              |                                 |
 | add_alert_note                         | 400      | content == 'bad_request'                                              |                                 |
 | add_alert_note                         | 404      | content == 'not_found'                                                |                                 |
@@ -336,6 +335,95 @@ Below is the full list of the currently available parameters to produce the vari
 | get_alert_list                         | 200      | skip_token == 'c2tpcFRva2Vu'                                          |                                 |
 | get_alert_list                         | 400      | start_date_time == 'bad_request'                                      |                                 |
 | get_alert_list                         | 500      | start_date_time == 'server_error'                                     |                                 |
+| get_oat_list                           | 200      | detected_start_date_time == random string                             |                                 |
+| get_oat_list                           | 200      | detected_start_date_time == 'next_link'                               |                                 |
+| get_oat_list                           | 200      | nextBatchToken == 'c2tpcFRva2Vu'                                      |                                 |
+| get_oat_list                           | 400      | detected_start_date_time == 'bad_request'                             |                                 |
+| get_oat_list                           | 500      | detected_start_date_time == 'server_error'                            |                                 |
+| add_attachment                         | 201      | None                                                                  |                                 |
+| add_attachment                         | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| add_attachment                         | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| add_attachment                         | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| add_attachment                         | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| add_content_to_case                    | 201      | None                                                                  |                                 |
+| add_content_to_case                    | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| add_content_to_case                    | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| add_content_to_case                    | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| add_content_to_case                    | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| create_case                            | 201      | None                                                                  |                                 |
+| create_case                            | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| create_case                            | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| create_case                            | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| delete_attachment                      | 204      | None                                                                  |                                 |
+| delete_attachment                      | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| delete_attachment                      | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| delete_attachment                      | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| delete_case_by_content_id              | 204      | None                                                                  |                                 |
+| delete_case_by_content_id              | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| delete_case_by_content_id              | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| delete_case_by_content_id              | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| download_attachment_by_id              | 200      | None                                                                  |                                 |
+| download_attachment_by_id              | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| download_attachment_by_id              | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| download_attachment_by_id              | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_case_content_by_content_id         | 200      | None                                                                  |                                 |
+| get_case_content_by_content_id         | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_case_content_by_content_id         | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_case_content_by_content_id         | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_case_contents_by_case_id           | 200      | skip_token == 'c2tpcFRva2Vu'                                          |                                 |
+| get_case_contents_by_case_id           | 200      | None                                                                  |                                 |
+| get_case_contents_by_case_id           | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| get_case_contents_by_case_id           | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_case_contents_by_case_id           | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_case_contents_by_case_id           | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_case_details_by_id                 | 200      | None                                                                  |                                 |
+| get_case_details_by_id                 | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_case_details_by_id                 | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_case_details_by_id                 | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_cases                              | 200      | skip_token == 'c2tpcFRva2Vu'                                          |                                 |
+| get_cases                              | 200      | None                                                                  |                                 |
+| get_cases                              | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| get_cases                              | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_cases                              | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| update_case                            | 204      | None                                                                  |                                 |
+| update_case                            | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| update_case                            | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| update_case                            | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| update_case                            | 412      | API_KEY == 'CONDITION_NOT_MET'                                        |                                 |
+| update_case                            | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| update_case_content                    | 204      | None                                                                  |                                 |
+| update_case_content                    | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| update_case_content                    | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| update_case_content                    | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| update_case_content                    | 412      | API_KEY == 'CONDITION_NOT_MET'                                        |                                 |
+| update_case_content                    | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_active_data_pipelines              | 200      | None                                                                  |                                 |
+| get_active_data_pipelines              | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_oat_event_pkgs                     | 200      | pageToken == 'c2tpcFRva2Vu'                                           |                                 |
+| get_oat_event_pkgs                     | 200      | None                                                                  |                                 |
+| get_oat_event_pkgs                     | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| get_oat_event_pkgs                     | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_oat_event_pkgs                     | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_oat_event_pkgs                     | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_oat_pkg                            | 200      | None                                                                  |                                 |
+| get_oat_pkg                            | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| get_oat_pkg                            | 403      | API_KEY == 'ACCESS_DENIED'                                            |                                 |
+| get_oat_pkg                            | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_oat_pkg                            | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| get_pipeline_settings                  | 200      | None                                                                  |                                 |
+| get_pipeline_settings                  | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| get_pipeline_settings                  | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| get_pipeline_settings                  | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| modify_settings                        | 204      | None                                                                  |                                 |
+| modify_settings                        | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| modify_settings                        | 404      | API_KEY == 'NOT_FOUND'                                                |                                 |
+| modify_settings                        | 412      | if_match == \"precondition_failed\"                                   |                                 |
+| modify_settings                        | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| register                               | 201      | None                                                                  |                                 |
+| register                               | 400      | API_KEY == 'BAD_REQUEST'                                              |                                 |
+| register                               | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
+| unregister                             | 207      | None                                                                  |                                 |
+| unregister                             | 500      | API_KEY == 'SERVER_ERROR'                                             |                                 |
 
 ## Contributing
 

@@ -1,0 +1,17 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPathPattern": "/v3.0/caseManagement/cases/(.*)/attachments/(.*)",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/octet-stream"
+    },
+    "body": "SGVsbG8gV29ybGQh",
+    "transformers": [
+      "response-template"
+    ]
+  }
+}

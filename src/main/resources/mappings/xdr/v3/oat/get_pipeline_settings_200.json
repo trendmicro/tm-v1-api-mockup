@@ -1,0 +1,25 @@
+{
+  "priority": 9,
+  "request": {
+    "urlPathPattern": "/v3.0/oat/dataPipelines/(.*)",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "riskLevels": [
+        "critical"
+      ],
+      "hasDetail": true,
+      "registeredDateTime": "2021-11-05T12:01:03Z",
+      "description": "siemhost1"
+    },
+    "headers": {
+      "Content-Type": "application/json",
+      "ETag": "0x8D9AB4B0CA9D336"
+    }
+  }
+}
