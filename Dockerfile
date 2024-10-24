@@ -1,0 +1,7 @@
+FROM wiremock/wiremock:latest
+
+COPY ./stubs /home/wiremock
+
+ENTRYPOINT ["/docker-entrypoint.sh", "--global-response-templating", "--disable-gzip", "--no-request-journal", "--verbose"]
+
+EXPOSE 8080

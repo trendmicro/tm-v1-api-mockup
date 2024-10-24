@@ -1,0 +1,19 @@
+{
+  "request": {
+    "urlPathPattern": "/v3.0/workbench/alerts/(.*)/notes/(.*)",
+    "method": "PATCH",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.content"
+      }
+    ],
+    "headers": {
+      "If-Match": {
+        "matches": ".+"
+      }
+    }
+  },
+  "response": {
+    "status": 204
+  }
+}

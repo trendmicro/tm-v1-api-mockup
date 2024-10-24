@@ -1,0 +1,37 @@
+{
+  "request": {
+    "urlPathPattern": "/v3.0/workbench/alerts/(.*)/notes",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "transformers": [
+      "response-template"
+    ],
+    "jsonBody": {
+      "items": [
+        {
+          "id": 2,
+          "content": "test note 2",
+          "creatorMailAddress": "john_doe@domain.com",
+          "creatorName": "John Doe",
+          "createdDateTime": "2020-11-12T10:30:13Z",
+          "lastUpdatedBy": null,
+          "lastUpdatedDateTime": null
+        },
+        {
+          "id": 1,
+          "content": "test note 1",
+          "creatorMailAddress": "john_doe@domain.com",
+          "creatorName": "John Doe",
+          "createdDateTime": "2020-11-11T15:10:08Z",
+          "lastUpdatedBy": "John Doe",
+          "lastUpdatedDateTime": "2020-11-11T15:15:21Z"
+        }
+      ]
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
