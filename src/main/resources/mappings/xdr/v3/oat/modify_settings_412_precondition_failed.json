@@ -5,7 +5,7 @@
     "method": "PATCH",
     "headers": {
       "If-Match": {
-        "matches": "\"precondition_failed\""
+        "matches": "precondition_failed"
       }
     }
   },

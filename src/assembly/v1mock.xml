@@ -4,11 +4,19 @@
     <id>apimock</id>
     <formats>
         <format>tar.gz</format>
+        <format>zip</format>
     </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <files>
+        <file>
+            <source>Dockerfile</source>
+            <outputDirectory/>
+        </file>
+    </files>
     <fileSets>
         <fileSet>
             <directory>${project.build.outputDirectory}</directory>
-            <outputDirectory/>
+            <outputDirectory>/stubs</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>

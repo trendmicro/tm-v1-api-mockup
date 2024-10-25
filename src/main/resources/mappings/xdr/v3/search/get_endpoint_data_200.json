@@ -22,23 +22,23 @@
             "value": [
               "MSEDGEWIN10\\\\IEUser"
             ],
-            "updatedDateTime": "{{now offset='-1 days'}}"
+            "updatedDateTime": "2020-06-01T02:12:56Z"
           },
           "endpointName": {
             "value": "MSEDGEWIN10",
-            "updatedDateTime": "{{now offset='-1 days'}}"
+            "updatedDateTime": "2020-06-01T02:12:56Z"
           },
           "macAddress": {
             "value": [
               "00:1c:42:be:22:5f"
             ],
-            "updatedDateTime": "{{now offset='-1 days'}}"
+            "updatedDateTime": "2020-06-01T02:12:56Z"
           },
           "ip": {
             "value": [
               "10.211.55.36"
             ],
-            "updatedDateTime": "{{now offset='-1 days'}}"
+            "updatedDateTime": "2020-06-01T02:12:56Z"
           },
           "osName": "Linux",
           "osVersion": "10.0.17763",
@@ -46,7 +46,12 @@
           "productCode": "sao",
           "installedProductCodes": [
             "xes"
-          ]
+          ],
+          "componentUpdatePolicy": "N-2",
+          "componentUpdateStatus": "pause",
+          "componentVersion": "outdatedVersion",
+          "policyName": "Example Policy Name",
+          "protectionManager": "A1-US"
         }
       ]
     },

@@ -1,0 +1,14 @@
+{
+  "request": {
+    "urlPathPattern": "/v3.0/workbench/alerts/(.*)/notes/delete",
+    "method": "POST",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$[?(@.id)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 204
+  }
+}
