@@ -5,7 +5,7 @@
     "method": "GET",
     "headers": {
       "TMV1-Query": {
-        "contains": "missing_prodcode"
+        "contains": "optional_fields"
       }
     }
   },
@@ -40,10 +40,10 @@
             ],
             "updatedDateTime": "2020-06-01T02:12:56Z"
           },
-          "osName": "Linux",
-          "osVersion": "10.0.17763",
-          "osDescription": "Windows 10 Enterprise Evaluation (64 bit) build 17763",
-          "productCode": "sao",
+          "osName": "",
+          "osVersion": "",
+          "osDescription": "",
+          "productCode": "",
           "installedProductCodes": [
             "xes"
           ],

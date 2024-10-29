@@ -23,8 +23,7 @@
       "count": 2,
       "totalCount": 20,
       "requestedDateTime": "2021-10-30T20:00:00Z",
-      "latestPackageCreatedDateTime": "2021-10-30T19:55:00Z",
-      "nextLink": "https://api.xdr.trendmicro.com/v3/xdr/oat/dataPipeline/8746fc45-6b9d-4923-b476-931aec6e06eb/packages?startDateTime=2021-10-07T18:00:00Z&endDateTime=2021-10-07T18:15:00Z&pageSize=500&pageToken=1hQ4LIXqZ2ODQPEp67gEl52LQGLtWMUq2pN7kVoInTOZowFKtFZ0+gyPBlfI0fACqJFAupCgTnIU="
+      "latestPackageCreatedDateTime": "2021-10-30T19:55:00Z"
     },
     "headers": {
       "Content-Type": "application/json"
